@@ -9,7 +9,8 @@ import javax.validation.constraints.Size;
 import lombok.Getter;
 import lombok.Setter;
 
-@Getter @Setter    
+
+@Getter @Setter
 @Entity
 public class Persona { 
    @Id
@@ -27,5 +28,11 @@ public class Persona {
    @Size(min = 1, max = 50, message = "No cumple con la longitud")
    private String img;
    
+   @NotNull
+   @Size(min = 1, max = 50, message = "No cumple con la longitud")
+   private String titulo;
    
+   @NotNull
+   @Size(min = 1, max = 255, message = "No cumple con la longitud")
+   private String acercaDeMi;
 }

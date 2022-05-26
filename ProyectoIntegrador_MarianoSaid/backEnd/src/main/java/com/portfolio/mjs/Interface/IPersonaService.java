@@ -3,7 +3,6 @@ package com.portfolio.mjs.Interface;
 import com.portfolio.mjs.Entity.Persona;
 import java.util.List;
 
-
 public interface IPersonaService {
     //Traer una lista de personas
     public List<Persona> getPersona();
@@ -16,6 +15,4 @@ public interface IPersonaService {
     
     //Busca por una persona por id
     public Persona findPersona(Long id);
-         
-    
 }

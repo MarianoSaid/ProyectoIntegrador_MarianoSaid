@@ -17,3 +17,4 @@ export class PersonaService {
     return this.http.get<persona>(this.URL+'traer/perfil');
    }
 }
+ 
