@@ -12,7 +12,6 @@ import lombok.Setter;
 @Getter @Setter
 @Entity
 public class Experiencia {
-   
    @Id
    @GeneratedValue(strategy = GenerationType.AUTO)
    private Long idExp; 

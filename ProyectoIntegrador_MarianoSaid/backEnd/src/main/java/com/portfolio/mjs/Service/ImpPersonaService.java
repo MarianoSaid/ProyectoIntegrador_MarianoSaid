@@ -16,7 +16,7 @@ import org.springframework.stereotype.Service;
         List<Persona> persona = ipersonaRepository.findAll();
         return persona;
     }
-
+  
     @Override
     public void savePersona(Persona persona) {
        ipersonaRepository.save(persona);
