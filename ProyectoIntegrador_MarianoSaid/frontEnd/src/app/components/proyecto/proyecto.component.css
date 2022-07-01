@@ -3,12 +3,12 @@
     color:white;
     background-color: darkolivegreen;
 }
-.cont{
-    width:auto;
+li{
+    color:black;
 }
+
 .title, .img{
-    display:inline-block;
-    text-align: justify;
+    display:inline;
 }
 .imagenProyecto{
     box-shadow:10px 10px 5px black;

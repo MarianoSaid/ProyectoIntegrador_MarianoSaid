@@ -3,33 +3,14 @@
     <div class="col-lg-1"></div>
     <div class="col-lg-11">
         <ul>
-            <li>
-                <h2>(tituloEdu)</h2> - 
-                <h3>(startEdu)</h3> -
-                <h3>(endEdu)</h3> -
-                <h3>(scoreEdu)</h3> -
-                <h2>(imagenEdu)</h2> 
+            <li *ngFor="let educacion of educacionList">
+                <h2>{{educacion.tituloEdu}}-</h2> 
+                <h3>{{educacion.startEdu}}-</h3> 
+                <h3>{{educacion.endEdu}}-</h3> 
+                <h3>Promedio {{educacion.scoreEdu}}-</h3> 
+                <h3>{{educacion.imagenEdu}}</h3> 
+                <p>{{educacion.desEdu}} 
             </li>
-                <p>(desEdu) Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia natus officiis voluptatibus maxime! Tenetur, aut dignissimos enim ea consequuntur earum odio quos, laudantium aliquam eum similique expedita nobis? Facere, earum?
-                </p>
-            <li>
-                <h2>(tituloEdu)</h2> - 
-                <h3>(startEdu)</h3> -
-                <h3>(endEdu)</h3> -
-                <h3>(scoreEdu)</h3> -
-                <h2>(imagenEdu)</h2> 
-            </li>
-                <p>(desEdu) Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia natus officiis voluptatibus maxime! Tenetur, aut dignissimos enim ea consequuntur earum odio quos, laudantium aliquam eum similique expedita nobis? Facere, earum?
-                </p>
-            <li>
-                <h2>(tituloEdu)</h2> - 
-                <h3>(startEdu)</h3> -
-                <h3>(endEdu)</h3> -
-                <h3>(scoreEdu)</h3> -
-                <h2>(imagenEdu)</h2> 
-            </li>
-                <p>(desEdu) Lorem, ipsum dolor sit amet consectetur adipisicing elit. Mollitia natus officiis voluptatibus maxime! Tenetur, aut dignissimos enim ea consequuntur earum odio quos, laudantium aliquam eum similique expedita nobis? Facere, earum?
-                </p>
         </ul>
     </div>
 </div>

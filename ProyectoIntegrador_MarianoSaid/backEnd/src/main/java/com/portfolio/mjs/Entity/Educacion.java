@@ -1,4 +1,4 @@
-package com.portfolio.mjs.Entity;
+ package com.portfolio.mjs.Entity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -13,7 +13,7 @@ import lombok.Setter;
 @Entity
 public class Educacion {
    @Id
-   @GeneratedValue(strategy = GenerationType.AUTO)
+   @GeneratedValue(strategy = GenerationType.IDENTITY)
    private Long idEdu; 
    
    @NotNull
@@ -22,16 +22,15 @@ public class Educacion {
   
    @NotNull
    @Size(min = 1, max = 50, message = "No cumple con la longitud")
-   private int startEdu;
+    private String startEdu;
    
    @Size(min = 1, max = 50, message = "No cumple con la longitud")
-   private int endEdu;
+   private String endEdu;
    
    @NotNull
    @Size(min = 1, max = 50, message = "No cumple con la longitud")
-   private int scoreEdu;
-   
-   
+   private String scoreEdu;
+      
    @Size(min = 1, max = 50, message = "No cumple con la longitud")
    private String imagenEdu;
    
@@ -39,5 +38,5 @@ public class Educacion {
    @Size(min = 1, max = 250, message = "No cumple con la longitud")
    private String desEdu;
    
-      
+  
 }

@@ -13,7 +13,7 @@ import lombok.Setter;
 @Entity
 public class Experiencia {
    @Id
-   @GeneratedValue(strategy = GenerationType.AUTO)
+   @GeneratedValue(strategy = GenerationType.IDENTITY)
    private Long idExp; 
    
    @NotNull
@@ -26,10 +26,10 @@ public class Experiencia {
     
    @NotNull
    @Size(min = 1, max = 50, message = "No cumple con la longitud")
-   private int startExp;
+   private String startExp;
    
    @Size(min = 1, max = 50, message = "No cumple con la longitud")
-   private int endExp;
+   private String endExp;
    
    @NotNull
    @Size(min = 1, max = 50, message = "No cumple con la longitud")
@@ -43,7 +43,7 @@ public class Experiencia {
    private String imagenExp;
    
    @NotNull
-   @Size(min = 1, max = 250, message = "No cumple con la longitud")
+   @Size(min = 1, max = 1000, message = "No cumple con la longitud")
    private String desExp;
     
 }

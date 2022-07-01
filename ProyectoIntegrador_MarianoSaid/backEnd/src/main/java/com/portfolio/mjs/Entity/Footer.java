@@ -14,7 +14,7 @@ import lombok.Setter;
 public class Footer {
     
   @Id
-  @GeneratedValue(strategy = GenerationType.AUTO)
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
    private Long idFoot; 
    
   @NotNull
@@ -26,8 +26,12 @@ public class Footer {
    private String nombreFoot;
   
    @NotNull
-   @Size(min = 1, max = 250, message = "No cumple con la longitud")
-   private String ubicacionFoot;   
+   @Size(min = 1, max = 50, message = "No cumple con la longitud")
+   private String ciudadFoot;
+
+    @NotNull
+   @Size(min = 1, max = 50, message = "No cumple con la longitud")
+   private String paisFoot;    
     
     
 }

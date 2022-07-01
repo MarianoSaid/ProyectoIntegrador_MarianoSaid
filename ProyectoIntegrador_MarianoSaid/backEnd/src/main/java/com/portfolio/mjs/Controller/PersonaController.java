@@ -35,7 +35,7 @@ public class PersonaController {
            ipersonaService.deletePersona(id);
            return "La persona fue eliminada correctamente";  
        }
-    //URL:PUERTO/personas/editar/5/nombreYapellidoYimg  
+    //URL:PUERTO/personas/editar/5/nombre&apellido&img  
     @PutMapping("/personas/editar/{id}")
        public Persona editPersona(@PathVariable Long id,
                                   @RequestParam("nombre") String nuevoNombre,
