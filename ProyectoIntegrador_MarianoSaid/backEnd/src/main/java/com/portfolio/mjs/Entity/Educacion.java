@@ -38,5 +38,5 @@ public class Educacion {
    @Size(min = 1, max = 250, message = "No cumple con la longitud")
    private String desEdu;
    
-  
+   
 }

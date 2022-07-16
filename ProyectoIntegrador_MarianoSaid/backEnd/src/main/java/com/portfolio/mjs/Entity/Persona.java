@@ -35,5 +35,5 @@ public class Persona {
    @NotNull
    @Size(min = 1, max = 255, message = "No cumple con la longitud")
    private String acercaDeMi;
-  
-}
+ 
+} 
