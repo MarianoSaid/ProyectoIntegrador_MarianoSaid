@@ -65,7 +65,7 @@ public class ExperienciaController {
          }   
         impexperienciaService.delete(id);
         return new ResponseEntity(new Mensaje("Experiencia eliminada"), HttpStatus.OK);
-    }     
+    }   
         
     //URL:PUERTO/experiencias/editar/1/empresaExp&posicionExp&...
     @PutMapping("/update/{id}")        
