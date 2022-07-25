@@ -1,36 +1,46 @@
 package com.portfolio.mjs.Service;
 
 import com.portfolio.mjs.Entity.Experiencia;
-import com.portfolio.mjs.Interface.IExperienciaService;
 import com.portfolio.mjs.Repository.IExperienciaRepository;
 import java.util.List;
+import java.util.Optional;
+import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class ImpExperienciaService implements IExperienciaService {
-    @Autowired IExperienciaRepository iexperienciaRepository; 
+@Transactional
+public class ImpExperienciaService {
+    @Autowired 
+    IExperienciaRepository iexperienciaRepository; 
     
-    @Override
-    public List<Experiencia> getExperiencia() {
-      List<Experiencia> experiencia = iexperienciaRepository.findAll();
-      return experiencia;
+    public List<Experiencia> list() {
+      return iexperienciaRepository.findAll();
+    }
+    
+    public void save(Experiencia expe) {
+      iexperienciaRepository.save(expe);
     }
 
-    @Override
-    public void saveExperiencia(Experiencia experiencia) {
-      iexperienciaRepository.save(experiencia);
-    }
-
-    @Override
-    public void deleteExperiencia(Long id) {
+    public void delete(int id) {
      iexperienciaRepository.deleteById(id);
     }
 
-    @Override
-    public Experiencia findExperiencia(Long id) {
-     Experiencia experiencia = iexperienciaRepository.findById(id).orElse(null);
-     return experiencia;
+    public Optional <Experiencia> getOne(int id) {
+     return iexperienciaRepository.findById(id);
     }
-       
+    
+    public Optional<Experiencia> getByEmpresaExp(String empresaExp){
+        return iexperienciaRepository.findByEmpresaExp(empresaExp);
+    }
+    
+    public boolean existsById (int id){
+        return iexperienciaRepository.existsById(id);
+    }
+    
+    public boolean existsByEmpresaExp (String empresaExp){
+       return iexperienciaRepository.existsByEmpresaExp(empresaExp);
+    }
+    
+    
 }

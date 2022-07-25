@@ -26,5 +26,4 @@ export class InterceptorService {
 export const interceptorProvider = [{
     provide: HTTP_INTERCEPTORS,
     userClass: InterceptorService,
-    multi: true
-}];
+    multi: true}];

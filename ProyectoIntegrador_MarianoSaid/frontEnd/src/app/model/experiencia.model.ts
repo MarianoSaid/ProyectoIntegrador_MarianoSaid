@@ -1,15 +1,15 @@
-export class experiencia{
+export class Experiencia{
     idExp?: number;
-    empresaExp: String;
-    posicionExp: String;
-    startExp: String;
-    endExp: String;
-    tiempoExp: String;
-    modoExp: String;
-    imagenExp: String;
-    desExp: String;
+    empresaExp: string;
+    posicionExp: string;
+    startExp: string;
+    endExp: string;
+    tiempoExp: string;
+    modoExp: string;
+    imagenExp: string;
+    desExp: string;
 
-    constructor(empresaExp: String, posicionExp: String, startExp: String, endExp: String, tiempoExp: String, modoExp: String, imagenExp: String, desExp: String){
+    constructor(empresaExp: string, posicionExp: string, startExp: string, endExp: string, tiempoExp: string, modoExp: string, imagenExp: string, desExp: string){
         this.empresaExp = empresaExp;
         this.posicionExp = posicionExp;
         this.startExp = startExp;

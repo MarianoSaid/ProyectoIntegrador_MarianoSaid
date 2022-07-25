@@ -1,18 +1,36 @@
 <div class="row">
     <h1>Experiencia laboral</h1>
-    <div class="col-lg-1"></div>
-    <div class="col-lg-11">
-        <ul>
-            <li *ngFor="let experiencia of experienciaList">
-                <h2>{{experiencia.empresaExp}}-</h2> 
-                <h2>{{experiencia.posicionExp}}-</h2>  
-                <h2>{{experiencia.startExp}}-</h2> 
-                <h2>{{experiencia.endExp}}-</h2> 
-                <h3>({{experiencia.tiempoExp}})-</h3> 
-                <h2>{{experiencia.modoExp}}-</h2> 
-                <h2>{{experiencia.imagenExp}}</h2> 
-                <p>{{experiencia.desExp}}</p>
-            </li>
-        </ul>
+    <div class = "col-lg-2">
+        <button type="button" class="btn btn-light" routerLink="/nuevaexp" *ngIf="isLogged">
+            Nueva Experiencia
+        </button>
     </div>
+    <div class="col-lg-1" ></div>
+    <div class="col-lg-11">
+        <table class="table">
+            <tbody>
+               <tr *ngFor="let Experiencia of expe">
+                <td>
+                    <h2>{{Experiencia.empresaExp}}</h2>
+                </td>
+                <td>{{Experiencia.posicionExp}}</td>
+                <td>{{Experiencia.startExp}}</td>
+                <td>{{Experiencia.endExp}}</td>
+                <td>{{Experiencia.tiempoExp}}</td>
+                <td>{{Experiencia.modoExp}}</td>
+                <td>{{Experiencia.imagenExp}}</td>
+                <td>{{Experiencia.desExp}}</td>
+                <td *ngIf="isLogged"> 
+                    <button class="btn btn-primary" routerLink="/editexp/{{Experiencia.idExp}}"> 
+                        <i class="bi bi-pencil-square"></i>EDITAR</button>
+                </td>  
+                <td *ngIf="isLogged">
+                    <button class="btn btn-danger" (click)="delete(Experiencia.idExp)">
+                        <i class="bi bi-trash-fill"></i> BORRAR</button>
+                </td>
+              
+               </tr>     
+            </tbody>
+        </table>
 </div>
+       
