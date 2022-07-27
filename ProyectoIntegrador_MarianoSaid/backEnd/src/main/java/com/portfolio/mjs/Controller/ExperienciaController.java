@@ -19,7 +19,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-// spring.datasource.driver-class-name=com.mysql.jdbc.Driver. En el app properties
+
 
 @RestController
 @RequestMapping("/explab")
@@ -42,7 +42,7 @@ public class ExperienciaController {
         Experiencia experiencia = impexperienciaService.getOne(id).get();
         return new ResponseEntity(experiencia, HttpStatus.OK);
     }    
-             
+    
     @PostMapping("/create")
         public ResponseEntity<?> create(@RequestBody dtoExperiencia dtoexp){
             if(StringUtils.isBlank(dtoexp.getEmpresaExp()))
