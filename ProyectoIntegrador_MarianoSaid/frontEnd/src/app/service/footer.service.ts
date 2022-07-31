@@ -7,7 +7,7 @@ import { footer } from '../model/footer.model';
   providedIn: 'root'
 })
 export class FooterService {
-  URL = 'http://localhost:8080/footer/';
+  URL = 'https://appmsbackend.herokuapp.com/footer/';
 
   constructor(private http: HttpClient) { }
   
