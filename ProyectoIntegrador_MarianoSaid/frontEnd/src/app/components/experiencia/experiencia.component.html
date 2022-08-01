@@ -1,12 +1,13 @@
+<div class="container-fluid">
 <div class="row">
     <h1>Experiencia laboral</h1>
-    <div class = "col-lg-2">
+    <div class = "col-sm-2">
         <button type="button" class="btn btn-light" routerLink="/nuevaexp">
             Nueva Experiencia
         </button>
     </div>
-    <div class="col-lg-1" ></div>
-    <div class="col-lg-11">
+    <div class="col-sm-1" ></div>
+    <div class="col-sm-11 text-center" >
         <table class="table">
             <tbody>
                <tr *ngFor="let Experiencia of expe">
@@ -25,9 +26,8 @@
                     <button class="btn btn-danger" (click)="delete(Experiencia.idExp)">
                         <i class="bi bi-trash-fill"></i> BORRAR</button>
                 </td>
-              
-               </tr>     
+                </tr>     
             </tbody>
         </table>
 </div>
-       
+</div>

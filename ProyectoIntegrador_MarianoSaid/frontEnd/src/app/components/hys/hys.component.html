@@ -1,6 +1,7 @@
+<div class="container-fluid">
 <div class="row">
    <h1>Hard and soft skills</h1>
-    <div class="text-center ccol-sm-4 md-4 col-lg-4"  *ngFor="let hys of hysList">
+        <div class="text-center col-sm-4 col-md-4 col-lg-4" *ngFor="let hys of hysList">
             <h3>{{hys.nombreSkill}}</h3>                
             <circle-progress  
                 [percent]= "hys.percentSkill"
@@ -19,4 +20,5 @@
                 ></circle-progress> 
     </div> 
 
+</div>
 </div>
